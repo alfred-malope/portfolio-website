@@ -149,8 +149,17 @@
 <section class="contact" id="contact">
   
   <h2 class="heading">Get in <span>Touch</span></h2>
-  
+
+  <div class="form">
+    <form action="send_email.php" method="POST">
+      <input type="text" placeholder="Your Name" name="name" required>
+      <input type="email" placeholder="Your Email" name="email" required>
+      <input type="tel" placeholder="Phone Number" name="phone" required>
+      <textarea placeholder="Message" name="message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
+  
   
 </section> 
 

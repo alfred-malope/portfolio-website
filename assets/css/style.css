@@ -572,5 +572,42 @@ border: 2px solid rgb(179, 61, 61);
   background: rgb(255, 255, 255);
 }
 
+.form {
+  max-width: 500px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: rgb(179, 61, 61);
+}
+
+form button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: rgb(179, 61, 61);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #e65c00;
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
 
