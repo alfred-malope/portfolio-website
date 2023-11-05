@@ -152,11 +152,11 @@
 
   <div class="form">
     <form action="send_email.php" method="POST">
-      <input type="text" placeholder="Your Name" name="name" required>
-      <input type="email" placeholder="Your Email" name="email" required>
-      <input type="tel" placeholder="Phone Number" name="phone" required>
-      <textarea placeholder="Message" name="message" required></textarea>
-      <button type="submit">Send Message</button>
+      <input type="text" placeholder="Your Name" name="name" id="name" required>
+      <input type="email" placeholder="Your Email" name="email" id="email" required>
+      <input type="tel" placeholder="Phone Number" name="phone" id="phone" required>
+      <textarea placeholder="Message" name="message" id="message" required></textarea>
+      <button type="submit" id="submit">Send Message</button>
     </form>
   </div>
   
@@ -165,7 +165,7 @@
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-  var btn = document.getElementById('btn');
+  var btn = document.getElementById('submit');
   btn.addEventListener('click',function(e){
       e.preventDefault()
       var name = document.getElementById('name').value;
@@ -177,7 +177,7 @@
       Email.send({
           SecureToken : "4867dbcd-3cc9-45b1-a155-61ea7c6ed00c",
           To : 'malopealfred12@gmail.com',
-          From : 'malopealfred12@gmail.com',
+          From : 'malopealfred@outlook.com',
           Subject : "Website Contact",
           Body : body
       }).then(
