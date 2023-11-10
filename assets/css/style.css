@@ -137,6 +137,7 @@ header .navbar ul li a:hover {
 .btn-talk:hover {
   color: #2a74b0;
   background: transparent;
+  cursor: pointer;
 }
 /* navbar ends */
 
@@ -227,13 +228,13 @@ header .navbar ul li a:hover {
 .home .content {
   flex: 1 1 40rem;
   padding-top: 1rem;
-  /* z-index: 1; */
+  z-index: 1;
 }
 
 
 .home .image {
   flex: 1 1 40rem;
-  /* z-index: 1; */
+  z-index: 1;
 }
 .home .image img {
   width: 100%;
@@ -311,11 +312,13 @@ header .navbar ul li a:hover {
   background: transparent;
   margin-left: 20px;
   padding: 8px 16px;
+  cursor: pointer;
 }
 
 .btn-group a:hover:nth-child(2) {
   color: #fff;
   background: #2a74b0;
+  cursor: pointer;
 }
 
 .social-icons {
@@ -698,6 +701,7 @@ form button:hover {
 }
 
 .popup-container {
+  z-index: 2;
   display: none;
   position: fixed;
   top: 0;
