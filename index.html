@@ -38,7 +38,7 @@
             <li><a href="#projects">Projects</a></li>
             </ul>
         </nav>
-        <a href="#" class="btn-talk">Let's Talk</a>
+        <a onclick="showContact()" class="btn-talk">Let's Talk</a>
 </header>
 <!-- navbar ends -->
 
@@ -157,12 +157,18 @@
   
 </section> 
 
-<!-- <section class="contact" id="contact">
-  
-  <h2 class="heading">Get in <span>Touch</span></h2>
 
+<div class="popup-container" id="popup-container">
+  <div class="popup-content">
+  <h2 class="heading">Get in <span>Touch</span></h2>
+  <span onclick="hideContact()" class="close" id="closePopup">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </span>
   <div class="form">
-    <form action="send_email.php" method="POST">
+    <form action="" method="POST">
+
       <input type="text" placeholder="Your Name" name="name" id="name" required>
       <input type="email" placeholder="Your Email" name="email" id="email" required>
       <input type="tel" placeholder="Phone Number" name="phone" id="phone" required>
@@ -170,9 +176,8 @@
       <button type="submit" id="submit">Send Message</button>
     </form>
   </div>
-  
-  
-</section>  -->
+  </div>
+</div>
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>

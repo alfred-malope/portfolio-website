@@ -52,6 +52,14 @@ var typed = new Typed(".effect2", {
     backDelay: 500,
 });
 
+function showContact() {
+    document.getElementById("popup-container").style.display = "flex";
+}
+
+function hideContact() {
+    document.getElementById("popup-container").style.display = "none";
+}
+
 function fetchSkills() {
     return fetch("./assets/json/skills.json")
       .then(response => response.json())
