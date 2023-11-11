@@ -90,14 +90,3 @@ fetchSkills().then(data => {
 });
 
 
-// Email.send({
-//     Host : "smtp.elasticemail.com",
-//     Username : "malopealfred12@gmail.com",
-//     Password : "E4EC429C5453F1713D095109FF0CE253B1B0",
-//     To : 'them@website.com',
-//     From : "malopealfred12@gmail.com",
-//     Subject : "This is the subject",
-//     Body : "And this is the body"
-// }).then(
-//   message => alert(message)
-// );
