@@ -1,6 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
+
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colors =====*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /* HSL color mode */
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --black-color: #000;
+  --black-color-light: rgb(128, 128, 128);
+  --the-orange: hsla(14, 94%, 50%, 0.4);
+  --body-color: rgb(245, 245, 245);
+  --container-color: rgb(231, 229, 229);
+  --white-color: rgb(255, 255, 255);
+  /*===== Fonts sizes and family  =====*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 2rem;
+  --biggest-font-size: 1.6rem;
+  --h1-font-size: 1.6rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+  /*===== Margins =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +62,7 @@ html::-webkit-scrollbar {
   width: 0.8rem;
 }
 html::-webkit-scrollbar-track {
-  background: rgb(235, 202, 245);
+  background: #fff;
 }
 html::-webkit-scrollbar-thumb {
   background: #0d61a5;
@@ -714,4 +745,255 @@ form button:hover {
 }
 .popup-content .bar:nth-child(3){
   transform: translateY(-8px) rotate(-50deg);
+}
+
+/* footer */
+
+footer{
+  background: #ffffff;
+  border-top: 1px solid rgb(248, 135, 93);
+  border-top-color: #d5d5d5;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer p {
+color: #666;
+font-size: medium;
+}
+
+.social-icon {
+margin-top: 20px;
+}
+
+.social-icon a {
+display: inline-block;
+margin-right: 10px;
+color: #333;
+font-size: 16px;
+transition: color 0.3s ease;
+}
+
+.social-icon a:hover {
+color: #2b3dda;
+}
+
+
+.scroll-up-btn{
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  border: 1px solid rgb(179, 61, 61);;
+  background: #fff;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: rgb(179, 61, 61);;
+  z-index: 9999;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+}
+
+ /* ======== PROJECTS ========= */
+
+.projects-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.projects-image {
+  position: relative;
+  margin-bottom: 1.5rem; /* Adjust margin as needed */
+  width: 100%; 
+  max-width: 220px; 
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+  border: 4px solid var(--black-color);
+  z-index: 1;
+}
+
+.projects-card {
+  padding: 1.5rem; 
+  transition: background-color .4s;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+}
+
+.projects-content {
+  margin-top: 1.5rem; 
+}
+
+.projects-buttons {
+  margin-top: 1.5rem; 
+}
+
+.projects-description {
+  margin-top: 1rem; 
+  color: var(--black-color-light);
+  font-size: .85rem;
+}
+
+.projects-button{
+  position: absolute;
+  right: 1rem;
+  bottom: -1.5rem;
+  padding: 1rem;
+}
+
+.projects-subtitle{
+  position: relative;
+  display: inline-block;
+  font-size: var(--smaller-font-size);
+  color: var(--black-color-light);
+  margin-bottom: .75rem;
+}
+
+.projects-subtitle::after{
+  content: '';
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  background-color: var(--black-color-light);
+  top: 50%;
+  left: -50%;
+}
+
+.projects-title{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi);
+}
+
+.projects-link{
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+  color: var(--black-color-light);
+  transition: color .4s;
+}
+
+.projects-link i{
+  font-size: 1rem;
+  color: var(--black-color-light);
+  transition: color .4s;
+}
+
+.projects-link:hover,
+.projects-link:hover i{
+  color: var(--the-orange);   
+}
+
+.projects-card:hover{
+  background-color: hsla(0, 2%, 75%, 0.75);
+}
+
+/* my work */
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.projects-image {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: 4px solid black;
+  z-index: 1;
+}
+
+.projects-card {
+    padding: 1.5rem;
+    transition: background-color .4s;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.projects-description {
+  margin-top: 1rem;
+  color: var(--black-color-light);
+  font-size: .85rem;
+}
+
+.projects-button {
+  position: absolute;
+  right: 1rem;
+  bottom: -1.5rem;
+  padding: 1rem;
+
+  background-color: black;
+  /* padding: 1.1rem 1.5rem; */
+  color: white;
+  font-weight: 1.25rem;
+  transition: background-color .4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  text-decoration: none;
+}
+@media screen and (min-width: 576px){
+  .projects-container{
+      grid-template-columns: 350px;
+      justify-content: center;
+  }
+}
+@media screen and (min-width: 768px){
+  .projects-container{
+      grid-template-columns: repeat(2, 350px);
+  }
+
+  .weather-card {
+      max-width: 50%; 
+      margin: auto;
+  }
+}
+@media screen and (min-width: 1150px){
+
+  .projects-container{
+    display: grid;
+      grid-template-columns: repeat(3, 352px);
+      padding-block: 3rem 1rem;
+      margin-inline: auto;
+  }
+
+  .projects-card{
+      padding: 1.25rem 1.25rem 2.5rem;
+  }
+
+  .projects-image{
+      margin-bottom: 1rem;
+  }
+
+  .projects-content{
+      margin-bottom: 2rem;
+  }
+
+  .projects-button{
+      right: 1.25rem;
+  }
+
+
 }
