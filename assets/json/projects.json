@@ -1,0 +1,10 @@
+[
+    {
+        "title": "Web Music Player",
+        "photo": "./assets/images/music_player.png",
+        "link":"https://lively-smoke-0de918210.4.azurestaticapps.net/",
+        "description":"Introducing my minimalist web music player! Built with HTML, CSS, and JS for seamless play, pause, and track navigation. Enjoy your favorite tunes on any device!",
+        "github":"https://github.com/alfred-malope/music-player"
+        
+    }
+]

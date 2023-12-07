@@ -1,3 +1,23 @@
+$(window).scroll(function(){
+
+    if(this.scrollY > 200){
+        $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
+            }
+
+      // Scrolling Button Btn
+      if(this.scrollY >500){
+        $('.scroll-up-btn').addClass("show");
+        }else{
+        $('.scroll-up-btn').removeClass("show");
+        }   
+});
+//slide-up script
+$('.scroll-up-btn').click(function(){
+    $('html').animate({scrollTop:0});
+});
+
 $(document).ready(function () {
 
     $('#menu').click(function () {
@@ -90,3 +110,49 @@ fetchSkills().then(data => {
 });
 
 
+
+function fetchProjects() {
+    return fetch("./assets/json/projects.json")
+      .then(response => response.json())
+      .then(projectsData => {
+        return projectsData;
+      });
+  }
+  
+
+function showProjects(projects) {
+    let projectsContainer = document.getElementById("projects-card");
+    let projectHTML = "";
+    projects.forEach(project => {
+        projectHTML += `
+        <article class="projects-card" >
+        <div class="projects-image">
+            <img src="${project.photo}" class="projects-img" alt="image">
+
+            <a href="${project.link}" target="_blank" class="projects-button button">
+                <i class="ri-arrow-right-up-line"></i>
+            </a>
+        </div>
+
+        <div class="projects-content">
+            <h3 class="projects-subtitle">Website</h3>
+            <h2 class="projects-title">${project.title}</h2>
+
+            <p class="projects-description">${project.description}</p>
+        </div>
+
+        <div class="projects-buttons">
+            <a href="${project.github}" target="_blank" class="projects-link">
+                <i class="ri-github-line"> View</i>
+            </a>
+
+        </div>
+        </article>`
+    });
+    projectsContainer.innerHTML = projectHTML;
+}
+
+
+fetchProjects().then(data => {
+    showProjects(data);
+});
