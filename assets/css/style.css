@@ -846,7 +846,7 @@ color: #2b3dda;
 .projects-description {
   margin-top: 1rem; 
   color: var(--black-color-light);
-  font-size: .85rem;
+  font-size: 1.03rem;
 }
 
 .projects-button{
@@ -875,7 +875,7 @@ color: #2b3dda;
 }
 
 .projects-title{
-  font-size: var(--normal-font-size);
+  font-size: 1.4rem;
   font-weight: var(--font-semi);
 }
 
@@ -888,7 +888,7 @@ color: #2b3dda;
 }
 
 .projects-link i{
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--black-color-light);
   transition: color .4s;
 }
@@ -934,7 +934,7 @@ color: #2b3dda;
 .projects-description {
   margin-top: 1rem;
   color: var(--black-color-light);
-  font-size: .85rem;
+  font-size: 1.03rem;
 }
 
 .projects-button {
