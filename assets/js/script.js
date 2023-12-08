@@ -99,7 +99,7 @@ function showSkills(skills) {
                 <img src=${skill.icon} alt="skill" />
                 <span>${skill.name}</span>
               </div>
-            </div>`
+        </div>`
     });
     skillsContainer.innerHTML = skillHTML;
 }
@@ -125,7 +125,7 @@ function showProjects(projects) {
     let projectHTML = "";
     projects.forEach(project => {
         projectHTML += `
-        <article class="projects-card" >
+        <card class="projects-card" >
         <div class="projects-image">
             <img src="${project.photo}" class="projects-img" alt="image">
 
@@ -147,7 +147,7 @@ function showProjects(projects) {
             </a>
 
         </div>
-        </article>`
+        </card>`
     });
     projectsContainer.innerHTML = projectHTML;
 }
