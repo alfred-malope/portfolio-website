@@ -53,9 +53,8 @@ $(document).ready(function () {
 });
 
 var typed = new Typed(".effect", {
-    strings: ["full-stack developer", "frontend developer", 
-    "backend developer", "cloud administrator", 
-    "database administrator", "web developer"],
+    strings: ["full-stack developer", "cloud administrator", 
+    "database administrator" ],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
@@ -63,9 +62,8 @@ var typed = new Typed(".effect", {
 });
 
 var typed = new Typed(".effect2", {
-    strings: ["full-stack developer", "frontend developer", 
-    "backend developer", "cloud administrator", 
-    "database administrator", "web developer"],
+    strings: ["full-stack developer", "cloud administrator", 
+    "database administrator" ],
     loop: true,
     typeSpeed: 50,
     backSpeed: 25,
